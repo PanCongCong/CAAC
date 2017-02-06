@@ -1,0 +1,59 @@
+<div class="container info">
+    <h3>专家文件评估界面</h3>
+    <div class="row pb20">
+        <h4>
+            状态：{{tbzt}}
+        </h4>
+    </div>
+    <table class="table">
+        <tr>
+            <th style="width:380px">
+                条款
+            </th>
+            <th style="width:380px">
+                企业上传资料
+            </th>
+            <th style="width:180px">
+                专家评分
+            </th>
+        </tr>
+    </table>
+    <table ng-repeat="x in YJTK" class="table">
+        <tr>
+            <td>
+                {{x.YJZB}}
+            </td>
+        </tr>
+        <tr ng-repeat="y in EJTK | filter:x.YJZB">
+            <td>
+                <table class="table">
+                    <tr>
+                        <td>
+                            {{y.EJZB}}
+                        </td>
+                    </tr>
+                    <tr ng-repeat="z in data | filter:y.EJZB">
+                        <td>
+                            <table class="table">
+                                <tr>
+                                    <td style="width:380px" ng-bind-html="z.TK2">
+                                    </td>
+                                    <td style="width:380px">
+                                        <a href="http://211.149.149.65:8080/AQBZ/Active/downLoad.php?fname={{z.ZL}}">下载：{{z.ZL}}</a>
+                                    </td>
+                                    <td style="width:180px">
+                                        <input type="text" class="form-control" ng-model="z.WJSHDF" ng-disabled="tbztFlag">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="container text-center pb20">
+        <button class="btn btn-default" ng-click="btnSave1()" ng-disabled="tbztFlag">暂存</button>
+        <button class="btn btn-success" ng-click="btnSave2()" ng-disabled="tbztFlag">提交</button>
+    </div>
+</div>

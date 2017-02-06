@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>系统管理子系统</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/manager.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-header">
+            功能菜单
+        </div>
+        <ul>
+            <li>
+                <a class="nav-list nav-list-act" href="#/home">
+                    <div class="nav-list-img">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </div>
+                    <div class="nav-list-tit">
+                        信息发布
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="nav-list" href="#/renyuan">
+                    <div class="nav-list-img">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </div>
+                    <div class="nav-list-tit">
+                        人员列表
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="rb">
+        <div class="rb-header">
+            <div class="rb-header-logo">
+                系统管理子系统
+            </div>
+            <div class="rb-header-btngroup">
+                <a href="#/selfCenter">个人中心</a>
+                <a onclick="back('userB')">退出</a>
+                <span>2016-12-15 19:32</span>
+            </div>
+        </div>
+        <div class="content" ng-view="">
+            
+        </div>
+    </div>
+    <script  src='../../public/js/lib/require.js' data-main='../../public/js/ManagerJS/main.js'></script>
+</body>
+
+</html>

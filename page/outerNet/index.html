@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/outer.css">
+    <title>外网系统</title>
+</head>
+
+<body>
+    <header class="logoH clearfix">
+        <a class="logo fleft" href="#"><img src="../../public/images/outerImg/logo.png" /></a>
+        <div class="fright text-right">
+            <h1>危险品安全运行保障能力综合评估系统</h1>
+            <form class="mt20">
+                <input class="height37 media-middle" type="text" placeholder="输入搜索内容">
+                <select class="height37 media-middle" name="search" id="">
+                <option value="请选择">请选择</option>
+                <option value="信息发布">信息发布</option>
+                <option value="图书馆">图书馆</option>
+                <option value="其他">其他</option>
+            </select>
+                <button class="btn btn-default height37 submit media-middle" type="submit"></button>
+            </form>
+        </div>
+    </header>
+    <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav">
+            <li><a href="#/home">首页</a><span>|</span></li>
+            <li><a href="#/intro">项目介绍</a><span>|</span></li>
+            <li><a href="#/shenbao">申报与评估</a><span>|</span></li>
+            <li><a href="#/info">信息发布</a><span>|</span></li>
+            <li><a href="#/tushu">图书馆</a><span>|</span></li>
+            <li><a href="#/contact">联系我们</a></li>
+        </ul>
+    </nav>
+    <div ng-view=""></div>
+
+    <footer id="footer">
+        <div>
+            <p>友情链接
+                <select ng-model="selected" name="links" id="links" ng-change="self.location.href=options[selectedIndex].value">
+                <option value=""><a href="http://www.carnoc.com/">民航资源网</a></option>
+                <option value=""><a href="http://www.castc.org.cn/">中国民航科学技术研究院</a></option>
+                <option value=""><a href="http://www.moc.gov.cn/">交通运输部</a></option>
+                <option value=""><a href="http://www.caac.gov.cn/">中国民用航空局</a></option>
+                <option value=""><a href="http://www.camic.cn/">民航管理干部学院</a></option>
+            </select>
+            </p>
+            <p class="clearfix mt10">
+                <span class="fright mr40">京ICP备06054027号</span> Copyright © 2014. CAAC North China Regional Administration.
+                All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <script type='text/javascript' src='../../public/js/lib/require.js' data-main='../../public/js/outerNetJS/main.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+body{
+    position: relative;
+}
+.nav{
+    position: fixed;
+    width: 120px;
+    background-color: #26344B;
+    height: 100%;
+    color: #fff;
+    z-index: 9999;
+}
+.nav .nav-header{
+    height: 80px;
+    background-color: #17C4BB;
+    text-align: center;
+    line-height: 80px;
+    font-size: 18px;
+}
+.nav .nav-list{
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+.nav .nav-list-img{
+    padding-top: 20px;
+    font-size: 28px;
+}
+.nav .nav-list-act{
+    background-color:#1F2B3D;
+}
+.nav .nav-list-act .nav-list-img{
+    color: #1B9495;
+}
+.nav .nav-list-tit{
+    padding-bottom: 20px;
+}
+
+.rb{
+    padding-left: 120px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.rb .rb-header{
+    height: 80px;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+}
+.rb .rb-header .rb-header-logo{
+    font-size: 18px;
+    text-align: center;
+    line-height: 80px;
+    padding-left: 20px;
+    float: left
+}
+.rb .rb-header .rb-header-btngroup{
+    line-height: 80px;
+    float: right;
+    padding-right: 140px;
+    font-size: 16px;
+    
+}
+.rb .rb-header .rb-header-btngroup a{
+    padding-right: 20px;
+}
+.rb-body{
+}
+.info{
+    padding-top: 120px;
+}
+.form-group{
+    width: 280px;
+    height: 40px;
+}
+.form-group lable{
+    padding-right: 15px;
+}
+.info .form-horizontal{
+    margin: 0 auto;
+}
+
+.table-striped .input-group{
+    width: 120px;
+}
+.upload-item > div{
+    margin-left: 20px;
+}
+.table thead th{
+    text-align: center;
+}
+.table .table{
+    background-color:transparent;
+}
+
+.stream{
+    padding-top: 180px;
+}
+.stream ul>li{
+    float: left;
+    margin-right:30px;
+    text-align: center;
+}
+.stream ol{
+    margin-top:-50px;
+}
+.stream ol>li{
+    margin-bottom: 20px;
+}
+.stream li a{
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    background:#F2DEDE;
+    cursor: pointer;
+ }
+ .t0{
+    background:#F2DEDE !important;
+ }
+  .t1{
+    background:#FCF8E3 !important;
+ }
+ .t9{
+    background:#DFF0D8 !important;
+ }
+
+.stream li a:hover{
+    background: #17C4BB;
+}
+.arrow{
+    font-size: 60px;
+    font-weight: bolder;
+    color: #607d8b;
+}

@@ -1,0 +1,67 @@
+<div class="container expertHome info">
+    <form action="" class="form-horizontal">
+        <lable class="col-md-2 control-label">姓名：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.MC" ng-disabled="true">
+        </div>
+        <lable class="col-md-2 control-label">出生年月：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.CSNY" ng-disabled="true">
+        </div>
+        <lable class="col-md-2 control-label">性别：</lable>
+        <div class="col-md-4">
+            <select class="form-control" ng-model="dd.XB" ng-disabled="!edit">
+                <option value="">--请选择--</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <lable class="col-md-2 control-label">最高学历：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.XL" ng-disabled="!edit">
+        </div>
+
+        <lable class="col-md-2 control-label">专业：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.ZY" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">所属业务领域：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.YWLY" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">职称：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.ZC" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">行政职务：</lable>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="dd.ZW" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">工作单位：</lable>
+        <div class="col-md-10">
+            <input type="text" class="form-control" ng-model="dd.DW" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">通讯地址及邮编：</lable>
+        <div class="col-md-10">
+            <input type="text" class="form-control" ng-model="dd.DZ" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">联系电话：</lable>
+        <div class="col-md-10">
+            <input type="text" class="form-control" ng-model="dd.DH" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">电子邮件：</lable>
+        <div class="col-md-10">
+            <input type="text" class="form-control" ng-model="dd.YJ" ng-disabled="!edit">
+        </div>
+        <lable class="col-md-2 control-label">主要简历及工作业绩：</lable>
+        <div class="col-md-10">
+            <textarea class="form-control" cols="30" rows="10" ng-model="dd.JL" ng-disabled="!edit"></textarea>
+            <!--<input type="text" class="form-control" ng-model="dd.JL" ng-disabled="!edit">-->
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <div>
+                <button class="btn btn-success" ng-click="btnClick()" ng-disabled="!submit">{{editText}}</button>
+            </div>
+        </div>
+    </form>
+</div>

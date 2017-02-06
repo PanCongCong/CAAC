@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>监察员评估系统</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/censor.css">
+</head>
+
+<body class="bodyBg" ng-controller="conApp">
+<div class="wrap">
+    <div class="header clearfix">
+        <div class="header-logo">
+            <img src="../../public/images/outerImg/logo2.png" alt=""/>
+            <span>危险品指标体系评价系统</span>
+        </div>
+        <div class="header-btngroup">
+            <a href="#/selfCenter" ng-bind="user"></a>
+            <a onclick="back('userJ')"><span class="navIcon glyphicon glyphicon-edit">退出</span></a>
+            <!--<span>{{dateStr}}</span>-->
+        </div>
+    </div>
+    <div class="contentWrap">
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a class="nav-list" href="#/pinggu">
+                        <span class="navIcon glyphicon glyphicon-edit"></span>
+                        监察员评估
+                        <i class="navArrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-list" href="#/home">
+                        <span class="navIcon glyphicon glyphicon-book"></span>
+                        评估说明
+                        <i class="navArrow"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="plr20 pt20" ng-view=""></div>
+        </div>
+    </div>
+    <footer>
+        <p class="clearfix">
+            <span class="fright mr40">京ICP备06054027号</span>
+            Copyright © 2014. CAAC North China Regional Administration. All rights reserved
+        </p>
+    </footer>
+</div>
+
+    <script  src='../../public/js/lib/require.js' data-main='../../public/js/CensorJS/main.js'></script>
+</body>
+
+</html>

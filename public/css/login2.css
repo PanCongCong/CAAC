@@ -1,0 +1,89 @@
+body {
+    background: -webkit-linear-gradient(#12486f, #0083c1);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#12486f, #0083c1);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#12486f, #0083c1);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(#12486f, #0083c1);
+    /* 标准的语法 */
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+
+.login-form {
+    background-color: #ABD1E8;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    height: 346px;
+    width: 600px;
+    margin: 200px 0px 0px -300px;
+}
+
+.header-logo {
+    margin-top: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header .header-tit {
+    font-size: 32px;
+    color: #1c4363;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+}
+
+.wap {
+    position: relative;
+    padding: 10px 110px;
+}
+
+.wap-l {
+    float: left;
+}
+
+.wap-l .row {
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    padding-bottom: 20px;
+}
+
+.wap-l span {
+    padding-right: 5px;
+}
+
+.wap-l input {
+    height: 25px;
+}
+
+.wap-r {
+    float: left;
+}
+
+.wap-r input[type="submit"] {
+    width: 128px;
+    height: 128px;
+    background-color: #0478B1;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.checkcode {
+    width: 100px;
+}
+
+#yzmText,
+#yzm,
+.yzmrow span {
+    float: left;
+    /*display: inline-block;*/
+}
+
+#yzm {
+    margin-left: 10px;
+}

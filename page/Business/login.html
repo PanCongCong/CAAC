@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/loginOuter.css">
+</head>
+
+<body class="bodyBg">
+    <div class="loginWrap">
+        <div class="top-logo">
+            <img src="../../public/images/outerImg/logo2.png" alt="">
+        </div>
+        <div class="top-tit">
+            危险品安全运行保障能力综合评估系统
+        </div>
+        <div class="login-form">
+
+            <div class="head-info">
+                企业用户登录
+            </div>
+            <div class="clear"></div>
+            <form class="formWrap">
+                <div class="mb14">
+                    <label for="name">用户名:</label>
+                    <input type="text" class="text" id="NAME" name="NAME" placeholder="用户名">
+                </div>
+                <div class="key mb14">
+                    <label for="pwd">密&nbsp;码:</label>
+                    <input type="password" id="PWD" name="PWD">
+                </div>
+                <div class="code clearfix">
+                    <label class="fleft mr5" for="yzmText">校验码:</label>
+                    <input class="fleft mr5" type="text" name="yzmText" id="yzmText">
+                    <img class="fleft mr5" src="../../public/images/checkcode.php" alt="" id="yzm">
+                </div>
+                <div class="forget mb14 clearfix">
+                    <p class="fleft">记住我? <input type="checkbox" id="remember" name="remember" /></p>
+                    <p class="fright"><a href="#">忘记密码？</a></p>
+                </div>
+                <div class="signin">
+                    <input id="sub" type="submit" value="登录">
+                </div>
+            </form>
+            <!--<p class="loginError">用户名或密码错误提示文字</p>-->
+            <!--<div id="myForm">-->
+            <!--<input type="text" class="text" id="NAME" name="NAME" placeholder="用户名">-->
+            <!--<div class="key">-->
+            <!--<input type="password" id="PWD" name="PWD" onfocus="this.value = '';">-->
+            <!--</div>-->
+            <!--<div class="signin">-->
+            <!--<input id="sub" type="submit" value="登录">-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../public/js/lib/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../public/js/lib/common.js"></script>
+    <script type="text/javascript" src="../../public/js/BusinessJS/controllers/login.js"></script>
+</body>
+
+</html>

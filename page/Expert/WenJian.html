@@ -1,0 +1,42 @@
+<div class="wenjian container info">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    企业名称
+                </th>
+                <th>
+                    企业类型
+                </th>
+                <th>
+                    入库时间
+                </th>
+                <th>
+                    当前状态
+                </th>
+                <th>
+                    操作选项
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data">
+                <td>
+                    {{x.MC}}
+                </td>
+                <td>
+                    {{translateLx(x.QYLX)}}
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    <a href="#/WenJian_XQ/?ID={{x.NAME}}">{{translateStatus(x.TBZT3)}}</a>
+                </td>
+                <td>
+                    <button class="btn btn-default">指派专家</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

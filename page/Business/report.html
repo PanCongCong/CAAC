@@ -1,0 +1,116 @@
+<div class="info">
+    <div class="row pb20">
+        <h2>
+            状态：{{tbzt}}
+        </h2>
+    </div>
+    <table class="table">
+        <tr>
+            <th style="width:380px">
+                评估指标
+            </th>
+            <th style="width:380px">
+                上传资料
+            </th>
+            <th style="width:180px">
+                索引
+            </th>
+            <th style="width:180px">
+                填报示例
+            </th>
+        </tr>
+    </table>
+    <table ng-repeat="x in YJTK" class="table">
+        <tr>
+            <td>
+                {{x.YJZB}}
+            </td>
+        </tr>
+        <tr ng-repeat="y in EJTK | filter:x.YJZB">
+            <td>
+                <table class="table">
+                    <tr>
+                        <td>
+                            {{y.EJZB}}
+                        </td>
+                    </tr>
+                    <tr ng-repeat="z in data | filter:y.EJZB">
+                        <td>
+                            <table class="table">
+                                <tr>
+                                    <td style="width:380px">
+                                        <span ng-bind-html="z.TK2"></span>
+                                    </td>
+                                    <td style="width:380px">
+                                        <div ng-show="uploader[z.ind].queue.length>0?false:true&&!z.showCXSC" ng-click="openFile(z.ID)" class="text-center">
+                                            <button type="button" class="btn btn-info btn-xs" ng-disabled="tbztFlag">
+                                                <span class="glyphicon glyphicon-open">点击上传</span> 
+                                            </button>
+                                        </div>
+                                        <div ng-show="z.showCXSC" class="text-center">
+                                            <a href="http://211.149.149.65:8080/AQBZ/Active/downLoad.php?fname={{z.ZL}}">下载：{{z.ZL}}</a>
+                                            <br>
+                                            <button type="button" class="btn btn-info btn-xs" ng-disabled="tbztFlag" ng-click="reOpenFile(z)">
+                                                <span class="glyphicon glyphicon-open">重新上传</span> 
+                                            </button>
+                                        </div>
+                                        <input name="{{z.ID}}" id="{{z.ID}}" type="file" nv-file-select="" uploader="uploader[z.ind]" ng-show="" /><br/>
+                                        <div ng-repeat="item in uploader[z.ind].queue" class="upload-item" ng-show="!z.showCXSC">
+                                            <div class="fleft">
+                                                <strong>{{item.file.name}}</strong>
+                                            </div>
+                                            <div class="fleft">
+                                                <span ng-show="uploader[z.ind].isHTML5">{{ item.file.size/1024/1024|number:2 }} MB</span>
+                                            </div>
+                                            <div ng-show="uploader[z.ind].isHTML5" class="progress fleft" style="width:80px">
+                                                <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                                            </div>
+                                            <div class="fleft">
+                                                <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                                                <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                                                <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div>
+                                                <!--<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                                    <span class="glyphicon glyphicon-upload"></span> 
+                                                </button>-->
+                                                <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                                    <span class="glyphicon glyphicon-ban-circle"></span> 
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                                    <span class="glyphicon glyphicon-trash"></span> 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="width:180px">
+                                        <input type="text" class="form-control" ng-model="z.SY" ng-disabled="tbztFlag">
+                                    </td>
+                                    <td style="width:180px">
+                                        <a ng-click="showTip(z.TBSL)">填报示例</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="text-center pb20">
+        <button class="btn btn-default" ng-click="btnSave1()" ng-disabled="tbztFlag">暂存</button>
+        <button class="btn btn-success" ng-click="btnSave2()" ng-disabled="tbztFlag">提交</button>
+    </div>
+    <div class="tbsl-tip" ng-show="showT">
+        <div class="tip-head clearfix">
+            <div class="tip-tit">
+                填报示例
+            </div>
+            <button type="button" class="close" aria-label="Close" ng-click="showT=false"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <span ng-bind-html="tbsl">
+    </span>
+    </div>
+</div>

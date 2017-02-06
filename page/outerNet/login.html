@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/css/login.css">
+</head>
+
+<body>
+    <div class="login-form">
+        <div class="head-info">
+            订单管理员登录
+        </div>
+        <div class="clear"></div>
+        <div class="avtar">
+            <img src="../../public/images/avtar.png" />
+        </div>
+        <div id="myForm">
+            <input type="text" class="text" id="uname" name="uname" placeholder="用户名">
+            <div class="key">
+                <input type="password" id="upass" name="upass" onfocus="this.value = '';">
+            </div>
+            <div class="signin">
+                <input id="sub" type="submit" value="登录">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../public/js/lib/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../public/js/controllers/login.js"></script>
+</body>
+</html>

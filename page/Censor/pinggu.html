@@ -1,0 +1,41 @@
+<div class="pinggu">
+    <div class="tab-head">
+        监察员评估
+    </div>
+    <div class="tab-content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        企业名称
+                    </th>
+                    <th>
+                        所属地
+                    </th>
+                    <th>
+                        企业类型
+                    </th>
+                    <th>
+                        评估状态
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in data">
+                    <td>
+                        {{x.MC}}
+                    </td>
+                    <td>
+                        {{x.DZ}}
+                    </td>
+                    <td>
+                        {{translateLx(x.QYLX)}}
+                    </td>
+                    <td>
+                        <a href="#/shuoming/?ID={{x.NAME}}">{{translateStatus(x.TBZT2)}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

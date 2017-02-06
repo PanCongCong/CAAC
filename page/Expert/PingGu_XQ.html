@@ -1,0 +1,47 @@
+<div class="container info">
+    <h3>评估确认界面</h3>
+    <div class="row pb20">
+    </div>
+    <table class="table">
+        <tr>
+            <th style="width:380px"> 条款
+</th>
+<th style="width:380px"> 评语
+</th>
+</tr>
+<tr ng-repeat="x in YJTK">
+    <td>
+        {{x.YJZB}}
+        <button class="btn btn-default" ng-click="addPJ(x,'1')" ng-disabled="tbztFlag">添加优势</button>
+        <button class="btn btn-default" ng-click="addPJ(x,'2')" ng-disabled="tbztFlag">添加不足</button>
+    </td>
+    <td>
+        <div class="row">
+            <div class="row">
+                <h4>优势：</h4>
+                <ul>
+                    <li ng-repeat="y in TableList2 | filter:{pID:x.ID,FL:1}">
+                        <button class="btn btn-default" ng-click="delPJ(y)" ng-disabled="tbztFlag">删除</button>
+                        <input type="text" ng-model="y.PGPY" ng-disabled="tbztFlag">
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <h4>不足：</h4>
+                <ul>
+                    <li ng-repeat="y in TableList2 | filter:{pID:x.ID,FL:2}">
+                        <button class="btn btn-default" ng-click="delPJ(y)" ng-disabled="tbztFlag">删除</button>
+                        <input type="text" ng-model="y.PGPY" ng-disabled="tbztFlag">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<input type="text" class="form-control" ng-model="x.PGPY" ng-disabled="tbztFlag">-->
+    </td>
+</tr>
+</table>
+<div class="container text-center pb20">
+    <button class="btn btn-default" ng-click="btnSave1()" ng-disabled="tbztFlag">暂存</button>
+    <button class="btn btn-success" ng-click="btnSave2()" ng-disabled="tbztFlag">提交</button>
+</div>
+</div>

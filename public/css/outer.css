@@ -1,0 +1,413 @@
+body {
+    background-color: #F2F2F2;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/*头部*/
+
+.logoH {
+    background: #e9e9e9;
+    text-align: center;
+    padding: 40px 10px;
+    height: 160px;
+}
+
+.logoH h1 {
+    color: #0a496e;
+    font-size: 36px;
+    font-weight: bolder;
+    font-family: MicrosoftYaHei Bold;
+}
+
+.logoH a {
+    width: 328px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logoH input,
+.logoH option,
+.logoH select,
+.logoH button {
+    border-radius: 0;
+    border: none;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.logoH input {
+    width: 200px;
+}
+
+.logoH select {
+    width: 116px;
+}
+
+.logoH button.submit {
+    background: url("../images/outerImg/search.png") no-repeat center center;
+    width: 37px;
+    height: 37px;
+}
+
+
+/*导航*/
+
+.navbar {
+    background: #1c4363;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.navbar .nav {
+    margin: 0 auto;
+    float: none;
+    width: 800px;
+}
+
+.navbar .nav>li {
+    padding: 15px;
+    float: left;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    display: inline-block;
+    padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a:link {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:visited {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #999;
+}
+
+.navbar-default .navbar-nav>li>a:active {
+    color: #999;
+}
+
+.navbar-default .navbar-nav>li>span {
+    margin-left: 30px;
+    color: #5e7b94;
+    display: inline-block;
+}
+
+
+/*脚部*/
+
+#footer {
+    background-color: #0a56a2;
+    height: 86px;
+    padding: 18px 25px;
+    font-size: 14px;
+}
+
+#footer span {
+    display: inline-block;
+}
+
+#footer p {
+    color: #fff;
+}
+
+#footer select {
+    color: #666;
+}
+
+
+/*首页*/
+
+.home .leftBar {
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    padding: 0px;
+    float: left
+}
+
+.home .leftBar .leftImg {
+    width: 100%;
+}
+
+.home .rightInfo {
+    width: 700px;
+    height: 200px;
+    float: left;
+    background-color: #fff;
+}
+
+.home .tit {
+    color: #2a75a6;
+    font-size: 16px;
+    /*float: left;*/
+    /*margin: 5px 0;*/
+}
+
+.home .info-top {
+    height: 22px;
+    position: relative;
+}
+.home .tongzhi{
+    
+}
+
+.home .tongzhi li {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 30px;
+}
+
+.home .tongzhi li a,
+.home .news li a {
+    /*padding-left: 15px;*/
+    color: #333;
+}
+
+.home .tongzhi li a:hover,
+.home .news li a:hover {
+    text-decoration: none;
+    color: #2a75a6;
+}
+
+.home .tongzhi li::before {
+    content: " ";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #27933e;
+    margin-right: 10px;
+}
+.home .tongzhi li span{
+    position: absolute;
+    right: 10px;
+    color: #0a56a2;
+}
+
+.home .news .time {
+    color: #2d9242;
+}
+
+.home .panelInfo {
+    width: 635px;
+    float: left;
+}
+
+.home .panelInfo p {
+    padding-top: 4px;
+    line-height: 24px;
+}
+
+.home .panelInfo-left {
+    width: 280px;
+    height: 180px;
+    float: left;
+}
+
+.home .panelInfo-right {
+    float: left;
+    width: 300px;
+    height: 180px;
+    padding-left: 32px;
+    padding-top: 12px;
+}
+
+.home .panel-book {
+    width: 345px;
+    float: left;
+    height: 212px;
+}
+.info-more {
+    position:absolute;
+    right: 0;
+    top: 0;
+    color: #898989;
+}
+
+
+/*项目介绍界面*/
+
+.intro {
+    background-color: #fff;
+}
+
+.intro h4 {
+    font-size: 20px;
+    color: #1c4363;
+    margin: 30px 0;
+}
+
+.intro p {
+    text-indent: 2em;
+    line-height: 32px;
+    color: #323232;
+}
+
+.intro img {
+    width: 100%;
+}
+
+
+/*申报与评估界面*/
+
+.shenbao {
+    width: 100%;
+    height: 600px;
+    background: url("../images/outerImg/home04.jpg") no-repeat center center;
+    vertical-align: middle;
+    background-size: 100%;
+    padding-top: 150px;
+    color: #fff;
+}
+
+.shenbao h3 {
+    font-size: 32px;
+    width: 580px;
+    margin: 0 auto 40px;
+    line-height: 60px;
+}
+
+.shenbao button {
+    width: 368px;
+    height: 54px;
+    background: #f3f3f3;
+    color: #1a4b83;
+    font-size: 32px;
+    text-align: center;
+    line-height: 32px;
+    border: none;
+}
+
+.shenbao button:hover {
+    background: #ddd;
+}
+
+
+/*信息发布以及图书馆界面*/
+
+.info .leftBar {
+    float: left;
+}
+
+.info .leftbar-nav {
+    width: 280px;
+    height: 450px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.info .leftbar-nav h4 {
+    width: 260px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4076a3;
+    color: #fff;
+}
+
+.info .tongzhi li {
+    width: 260px;
+    height: 56px;
+    line-height: 56px;
+    background-color: #F2F2F2;
+    color: #323232;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.info .tongzhi li a {
+    color: #323232;
+}
+
+.info .tongzhi li a::after {
+    content: ">";
+    position: absolute;
+    right: 30px;
+    color: #323232;
+}
+
+.info .tongzhi li:hover {
+    background-color: #d5d5d5;
+}
+
+.info .leftImg {
+    width: 280px;
+}
+
+.info .rightBar {
+    float: left;
+    background-color: #fff;
+    padding: 25px;
+    width: 700px;
+    height: 670px;
+}
+
+.info .rightBar ul>li {
+    line-height: 45px;
+    font-size: 14px;
+    color: #323232;
+    border-bottom: 1px solid #d6d6d6;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info .rightBar ul>li::after {
+    content: " ";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #27933e;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -3px;
+}
+
+.info .rightBar ul>li>a {
+    color: #323232;
+}
+
+.info .rightBar ul>li span {
+    position: absolute;
+    right: 10px;
+    color: #27933e;
+}
+
+
+/*联系我们界面*/
+
+.contact {
+    background: #fff;
+}
+
+.map {
+    width: 940px;
+    margin: 0 auto 30px;
+}
+
+.contact p {
+    line-height: 30px;
+    font-size: 14px;
+    color: #323232;
+    width: 940px;
+    margin: 10px auto 30px;
+}
+

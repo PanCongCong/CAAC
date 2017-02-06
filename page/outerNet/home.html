@@ -1,0 +1,52 @@
+<div class="home" ng-controller="homeCon">
+    <div class="row">
+        <div class="panel leftBar">
+            <div class="leftImg">
+                <img src="../../public/images/outerImg/home01.png" alt="" />
+            </div>
+        </div>
+        <div class="ml20 rightInfo">
+            <div class="panel row pb25">
+                <div class="info-top">
+                    <div class="tit">信息发布</div>
+                    <a class="info-more" href="#/info">更多>></a>
+                </div>
+
+                <ul class="tongzhi">
+                    <li ng-repeat="item in items"><a href="#">{{item.ZT}}</a><span>05-30</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="panelInfo panel">
+            <div class="panelInfo-left text-left">
+                <img src="../../public/images/outerImg/home02.jpg" alt="" />
+            </div>
+            <div class="panelInfo-right">
+                <div class="info-top">
+                    <div class="tit">项目介绍</div>
+                </div>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本机构依法设立，保证“客观独立、公平公正、诚实守信”的原则从事检验检测工作， 对此承担相应的法律责任；并承诺独立于出具的检验检测数据、结果所涉及的利益相关方，
+                    不受任何可能干扰其技术判断因素的影响，做到公正、准确、高效...
+                </p>
+            </div>
+        </div>
+
+        <div class="panel-book panel ml15">
+            <div class="info-top">
+                <div class="tit">图书馆</div>
+                <a class="info-more" href="#/tushu">更多>></a>
+            </div>
+
+            <ul class="tongzhi">
+                <li>联合国《关于危险货物运输的建议书-试验和标准手册》(小橙皮书)</li>
+                <li>国际民用航空公约及附件18简介</li>
+                <li>危险物品航空安全运输技术细则（简称《技术细则》）简介</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

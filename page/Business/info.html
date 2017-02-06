@@ -1,0 +1,54 @@
+<div class="info">
+    <div class="tab-head">
+        基本信息
+    </div>
+    <div class="tab-content">
+        <form action="" class="info-from">
+            <div class="form-row clearfix clearfix">
+                <lable>企业名称：</lable>
+                <div>
+                    <input type="text" class="form-control" ng-model="dd.MC" ng-disabled="!edit">
+                </div>
+            </div>
+            <div class="form-row clearfix">
+                <lable>企业类型：</lable>
+                <div>
+                    <select class="form-control" ng-model="dd.QYLX" ng-disabled="!edit">
+                    <option value="">--请选择--</option>
+                    <option value="1">经营人</option>
+                    <option value="2">地面服务代理人</option>
+                    <option value="3">货运销售代理人</option>
+                    <option value="4">托运人代理人</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-row clearfix">
+                <lable>城市：</lable>
+                <div>
+                    <input type="text" class="form-control" ng-model="dd.DZ" ng-disabled="!edit">
+                </div>
+            </div>
+            <div class="form-row clearfix">
+                <lable>联系人：</lable>
+                <div>
+                    <input type="text" class="form-control" ng-model="dd.LXR" ng-disabled="!edit">
+                </div>
+            </div>
+            <div class="form-row clearfix">
+                <lable>电子邮箱：</lable>
+                <div>
+                    <input type="text" class="form-control" ng-model="dd.YJ" ng-disabled="!edit">
+                </div>
+            </div>
+            <div class="form-row clearfix">
+                <lable>联系电话：</lable>
+                <div>
+                    <input type="text" class="form-control" ng-model="dd.DH" ng-disabled="!edit">
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-success" ng-click="btnClick()" ng-disabled="!submit">{{editText}}</button>
+            </div>
+        </form>
+    </div>
+</div>

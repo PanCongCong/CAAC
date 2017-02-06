@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <title>专家评估系统</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/expert.css">
+
+</head>
+
+<body class="up" ng-controller="conApp">
+    <div>
+        <div class="rb-header">
+            <div class="cont clearfix">
+                <div class="rb-header-logo">
+                    <img src="../../public/images/outerImg/logo2.png" alt="" />
+                    <span>危险品安全运行保障能力综合评估系统</span>
+                </div>
+                <div class="rb-header-btngroup">
+                    Welcome<a href="#/selfCenter" ng-bind="user"></a><span onclick="back('userZ')">退出</span>
+                </div>
+            </div>
+            <div class="cont">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation"><a class="nav-list" href="#/WenJian">文件评估</a></li>
+                    <li role="presentation"><a class="nav-list" href="#/XianChang">现场验证</a></li>
+                    <li role="presentation"><a class="nav-list" href="#/WenJian">个体访谈</a></li>
+                    <li role="presentation"><a class="nav-list" href="#/PingGu">评估确认</a></li>
+                    <li role="presentation"><a class="nav-list nav-list-dis" ng-disabled="true" href="javascript:volid(0);">专家库管理</a></li>
+                    <li role="presentation"><a class="nav-list nav-list-dis" ng-disabled="true" href="javascript:volid(0);">系统管理</a></li>
+                    <li role="presentation"><a class="nav-list nav-list-dis" ng-disabled="true" href="javascript:volid(0);">查询与分析</a></li>
+                    <li role="presentation"><a class="nav-list nav-list-dis" ng-disabled="true" href="javascript:volid(0);">图书馆</a></li>
+                    <li role="presentation"><a class="nav-list" href="#/home">个人资料</a></li>
+                </ul>
+            </div>
+            <div class="nav-line"></div>
+        </div>
+        <div class="mt20 height">
+            <div ng-view="">
+
+            </div>
+        </div>
+        <footer>
+            <p class="clearfix">
+                <span class="fright mr40">京ICP备06054027号</span> Copyright © 2014. CAAC North China Regional Administration.
+                All rights reserved
+            </p>
+        </footer>
+    </div>
+    <script src='../../public/js/lib/require.js' data-main='../../public/js/ExpertJS/main.js'></script>
+</body>
+
+</html>

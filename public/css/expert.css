@@ -1,0 +1,120 @@
+/*index*/
+.rb-header{
+    height: 192px;
+    line-height: normal;
+    padding-top: 20px;
+    background: #0672a7;
+    color: #fff;
+    position: relative;
+}
+.nav-line{
+    height: 36px;
+    width: 100%;
+    background:#9CCDEA;
+}
+.cont{
+    width: 1200px;
+    margin: 0 auto;
+}
+.rb-header-logo{
+    line-height: 55px;
+    float: left;
+}
+.rb-header-logo img{
+    vertical-align: middle;
+}
+.rb-header-logo span{
+    vertical-align: middle;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+.rb-header-btngroup{
+    line-height: 55px;
+    float: right;
+    color: #fff;
+}
+.rb-header-btngroup a{
+    color: #00AEEF;
+    padding: 10px;
+    text-decoration: underline;
+}
+.rb-header-btngroup span{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.up{
+    background: #d2eeff;
+    /*position: relative;*/
+}
+/*导航*/
+.up .nav{
+    margin-left: 144px;
+    bottom: 0;
+    margin-top:40px;
+}
+.up .nav a{
+    color: #fff;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 14px;
+    background: #0093d8;
+}
+.up .nav a:link{
+    color: #1c4363;
+    background:#9ccdea;
+}
+.up .nav a:visited{
+    color: #fff;
+    background:#0093d8;
+}
+.up .nav a:hover{
+    color: #1c4363;
+    background:#9ccdea;
+}
+.up .nav a:active{
+    color: #1c4363;
+    background:#9ccdea;
+}
+.up footer{
+    /*bottom:0;*/
+    /*position: absolute;*/
+    background: none;
+    color: #0093d8;
+    width: 100%;
+}
+.up .table thead tr th{
+    text-align: center;
+    background:#0093d8;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+}
+.up .table td:first-child{
+    font-size: 14px;
+    color: #1c4363;
+}
+.up .table{
+    background: #fff;
+}
+.up .table td{
+    border:1px solid #ccc;
+    text-align: center;
+}
+.wenjian .btn{
+    line-height: 24px;
+    height: 24px;
+    padding-top:0;
+    padding-bottom: 0px;
+}
+.expertHome [class*="col-"]{
+    margin-top:10px;
+}
+.nav-list-act2{
+    background-color: #9ccdea !important;
+}
+.nav-list-dis{
+    background-color: #555 !important;
+    color: #fff !important;
+}

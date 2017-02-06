@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <title>接口说明</title>
+</head>
+
+<body>
+    <!-- ng-app="homeApp" -->
+    <div class="container">
+        <div class="row">
+            <h3>获取信息发布列表</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/Query.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:getTZGG-----请求模式</li>
+                <li>size:3-----获取多少条数据，若参数为空，则获取所有数据</li>
+            </ul>
+            <strong>返回值：</strong><span>{"TableList":[{"ID":"1","LX":"1","ZT":"主题1","FBT":"副标题1","CJSJ":"2016-12-14 23:18:51","NR":"dsadas"},{"ID":"2","LX":"1","ZT":"231231","FBT":"23132","CJSJ":"2016-12-13 23:19:08","NR":"\u6e29\u6cc9\u533a\u4e8c\u7fa4\u4e8c\u7fa4\u4e8c"}]}</span>
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>获取信息发布明细</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/Query.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:getTZGGMX-----请求模式</li>
+                <li>ID:3-----获取ID为多少的数据</li>
+            </ul>
+            <strong>返回值：</strong><span>{"TableList":[{"ID":"1","LX":"1","ZT":"主题1","FBT":"副标题1","CJSJ":"2016-12-14 23:18:51","NR":"dsadas"}]}</span>
+
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>新增信息发布</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/SubmitModel.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:addTZGGMX-----请求模式</li>
+                <li>data-----实体数据全集，详见数据字典</li>
+            </ul>
+            <strong>返回值：</strong><span>0代表执行失败，1或-1代表执行成功</span>
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>修改信息发布</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/SubmitModel.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:updateTZGGMX-----请求模式</li>
+                <li>data-----实体数据全集，详见数据字典<</li>
+            </ul>
+            <strong>返回值：</strong><span>0代表执行失败，1或-1代表执行成功</span>
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>删除信息发布</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/SubmitModel.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:delTZGGMX-----请求模式</li>
+                <li>data-----实体数据全集，详见数据字典<</li>
+            </ul>
+            <strong>返回值：</strong><span>0代表执行失败，1或-1代表执行成功</span>
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>获取新闻动态</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/Query.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:getXWDT-----请求模式</li>
+                <li>size:3-----获取多少条数据，若参数为空，则获取所有数据</li>
+            </ul>
+            <strong>返回值：</strong><span>{"TableList":[{"ID":"1","LX":"1","ZT":"主题1","FBT":"副标题1","CJSJ":"2016-12-14 23:18:51","NR":"dsadas"},{"ID":"2","LX":"1","ZT":"231231","FBT":"23132","CJSJ":"2016-12-13 23:19:08","NR":"\u6e29\u6cc9\u533a\u4e8c\u7fa4\u4e8c\u7fa4\u4e8c"}]}</span>
+
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>判断用户名密码是否正确</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/SubmitModel.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:CheckLoginB-----请求模式</li>
+                <li>NAME:用户名</li>
+                <li>PWD:密码</li>
+                <li>LX:6 此处传用户类型：1超级管理员；2管理员；3专家；4专家组长；5监察员；6企业</li>
+            </ul>
+            <strong>返回值：</strong><span>1正确  0错误</span>
+
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>获取企业填报列表-检察员</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/Query.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:getJCPGList-----请求模式</li>
+                <li>NAME:当前登录检察员用户名NAME</li>
+                <li>zt:状态，传0代表获取检察员未审核完毕的企业列表；传1代表已经评审完毕的企业列表；为空代表所有企业列表</li>
+            </ul>
+            <strong>返回值：</strong><span>{"TableList":data} --data中，QYLX代表企业类型，1代表经营人，2代表地面服务代理人，3代表货运销售代理人，4代表托运人代理人</span>
+            <span></span>
+        </div>
+        <div class="row">
+            <h3>获取企业填报明细信息</h3>
+            <strong>请求URL：</strong><span>http://211.149.149.65:8080/AQBZ/Active/SubmitModel.php</span><br>
+            <strong>参数：</strong>
+            <ul>
+                <li>pMode:getQiYe-----请求模式</li>
+                <li>NAME:需要获取的企业用户名NAME</li>
+            </ul>
+            <strong>返回值：</strong><span>{"TableList":$data,"pMode":"$TBZT1"}---其中TableList为填报明细；pMode中为填报状态，0代表未填报，1代表填报中，9代表填报完毕</span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+</script>

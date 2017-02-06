@@ -1,0 +1,102 @@
+<div class="container info">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    企业名称
+                </th>
+                <th>
+                    企业类型
+                </th>
+                <th>
+                    入库时间
+                </th>
+                <th>
+                    检察员账号
+                </th>
+                <th>
+                    文件评估专家详情
+                </th>
+                <th>
+                    现场评估专家详情
+                </th>
+                <th>
+                    操作选项
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in data">
+                <td>
+                    {{x.MC}}
+                </td>
+                <td>
+                    {{translateLx(x.QYLX)}}
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    {{x.JCYID}}
+                </td>
+                <td>
+                    <a href="#/WenJian_XQ/?ID={{x.NAME}}">查看文件评估</a>
+                </td>
+                <td>
+                    <a href="#/XianChang_XQ/?ID={{x.NAME}}">查看现场评估</a>
+                </td>
+                <td>
+                    <a href="#/PingGu_XQ/?ID={{x.NAME}}">编辑评估确认报告</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="fixDiv panel panel-primary" ng-show="edit">
+        <div class="panel-heading">
+            <h3 class="panel-title">评估确认</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    公司名称：
+                </div>
+                <div class="col-md-9">
+                    {{dd.MC}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    企业类型：
+                </div>
+                <div class="col-md-9">
+                    {{translateLx(dd.QYLX)}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    总得分：
+                </div>
+                <div class="col-md-9"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    评语
+                </div>
+                <div class="col-md-9">
+                    <input type="text" ng-model="dd.PGPY" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3">
+                    <button class="btn btn-primary">
+                        提交
+                    </button>
+                    <button class="btn btn-default" ng-click="edit=false">
+                        关闭
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

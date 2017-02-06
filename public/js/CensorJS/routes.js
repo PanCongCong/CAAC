@@ -1,0 +1,45 @@
+define([  
+    "app"  
+    ], function (app) {  
+
+    //app是Angular应用对象  
+    app.config(function($routeProvider){
+        $routeProvider.when(
+            '/home',{
+                templateUrl:"home.html",
+                controller:"homeCon"
+            }
+            ).when(
+            '/pinggu',{
+                templateUrl:"pinggu.html",
+                controller:"pingguCon"
+            }
+            ).when(
+            '/zhuangtai',{
+                templateUrl:"zhuangtai.html",
+                controller:"zhuangtaiCon"
+            }
+            ).when(
+            '/shuoming',{
+                templateUrl:"shuoming.html",
+                controller:"shuomingCon"
+            }
+            ).when(
+            '/selfCenter',{
+                templateUrl:"selfCenter.html",
+                controller:"selfCenterCon"
+            }
+            ).when(
+            '/qyinfo',{
+                templateUrl:"qyinfo.html",
+                controller:"qyinfoCon"
+            }
+            ).when(
+            '',{
+                templateUrl:"home.html",
+                controller:"homeCon"
+            }
+            )
+            .otherwise({redirectTo:'/pinggu'});
+        });
+})  
